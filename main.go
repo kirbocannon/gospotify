@@ -6,8 +6,11 @@ import (
 	"fmt"
 	"github.com/zmb3/spotify"
 	"golang.org/x/oauth2/clientcredentials"
+	"gopkg.in/yaml.v2"
 	"gospotify/internal/dataUtils"
 	"gospotify/internal/logger"
+	"io/ioutil"
+	"path/filepath"
 	"strings"
 )
 
@@ -15,6 +18,12 @@ type Track struct {
 	Name string
 	Artists []spotify.SimpleArtist
 
+}
+
+type SpotifyCredentials struct {
+	UserId string `yaml:"username"`
+	ClientId string `yaml:"id"`
+	ClientSecret string `yaml:"secret"`
 }
 
 type Genre struct {
@@ -69,15 +78,30 @@ func (set *ArtistIdSet) Remove(i spotify.ID) {
 }
 
 func main() {
+
+	filename, _ := filepath.Abs("appConfig.yaml")
+	configFile, err := ioutil.ReadFile(filename)
+
+	if err != nil {
+		panic(err)
+	}
+
+	var spotifyCreds SpotifyCredentials
+	err = yaml.Unmarshal(configFile, &spotifyCreds)
+	
+	if err != nil {
+		panic(err)
+	}
+
 	// setup logging
 	logto := logger.NewLogger()
-	userID := "theillego"
+	userID := spotifyCreds.UserId
 	validToken := false
 
 	// provide API credentials
 	config := &clientcredentials.Config{
-		ClientID:     "75c5079571ec441dbc4878efd335363f",
-		ClientSecret: "0c05eaf460ae43c9a7c611b57bec4737",
+		ClientID:     spotifyCreds.ClientId,
+		ClientSecret: spotifyCreds.ClientSecret,
 		TokenURL:     spotify.TokenURL,
 	}
 	token, err := config.Token(context.Background())
