@@ -1,0 +1,10 @@
+package: gospotify
+import:
+- package: github.com/sirupsen/logrus
+- package: github.com/theillego/gospotify
+  subpackages:
+  - internal/logger
+- package: github.com/zmb3/spotify
+- package: golang.org/x/oauth2
+  subpackages:
+  - clientcredentials

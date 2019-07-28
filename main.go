@@ -1,11 +1,13 @@
 package main
 
 import (
+	"bytes"
 	"context"
 	"fmt"
-	"github.com/theillego/gospotify/internal/logger"
 	"github.com/zmb3/spotify"
 	"golang.org/x/oauth2/clientcredentials"
+	"gospotify/internal/dataUtils"
+	"gospotify/internal/logger"
 	"strings"
 )
 
@@ -25,9 +27,14 @@ type StringSet struct {
 	set map[string]bool
 }
 
+// Artist ID Set
+type ArtistIdSet struct {
+	set map[spotify.ID]bool
+}
+
 // initialize map
-func NewStringSet() *StringSet {
-	return &StringSet{make(map[string]bool)}
+func NewArtistIdSet() *ArtistIdSet {
+	return &ArtistIdSet{make(map[spotify.ID]bool)}
 }
 
 // add if value is not true (key not in map)
@@ -46,16 +53,19 @@ func (set *StringSet) Remove(i string) {
 	delete(set.set, i)
 }
 
-func FormatSpotifyErrorMessage(err error) (parsedError []string) {
-	parsedError = strings.Split(err.Error(), "Response:")
+func (set *ArtistIdSet) Add(i spotify.ID) bool {
+	_, found := set.set[i]
+	set.set[i] = true
+	return !found
+}
 
-	// strip any new lines found in messages
-	// This is currently NOT working
-	for i := 0; i < 2; i++ {
-		parsedError = append(parsedError, strings.TrimSuffix(parsedError[i], "\n"))
-	}
+func (set *ArtistIdSet) Get(i spotify.ID) bool {
+	_, found := set.set[i]
+	return found	//true if it existed already
+}
 
-	return
+func (set *ArtistIdSet) Remove(i spotify.ID) {
+	delete(set.set, i)
 }
 
 func main() {
@@ -73,7 +83,7 @@ func main() {
 	token, err := config.Token(context.Background())
 
 	if err != nil {
-		serr := FormatSpotifyErrorMessage(err)[0]
+		serr := logger.FormatSpotifyErrorMessage(err)[0]
 		logto.SpotifyError(serr)
 
 	} else {
@@ -87,11 +97,11 @@ func main() {
 		// get playlist
 		userPlaylists, err := client.GetPlaylistsForUser(userID)
 		if err != nil {
-			spotifyError := FormatSpotifyErrorMessage(err)[0]
+			spotifyError := logger.FormatSpotifyErrorMessage(err)[0]
 			logto.SpotifyError(spotifyError)
 		}
 
-		artists := NewStringSet()
+		artists := NewArtistIdSet()
 		tracks := map[string][]string{}
 		//genres := map[string][]string{}
 
@@ -99,22 +109,81 @@ func main() {
 			//fmt.Println(p.Name, p.Tracks.Total)
 			playListTracks, err := client.GetPlaylistTracks(p.ID)
 			if err != nil {
-				spotifyError := FormatSpotifyErrorMessage(err)[0]
+				spotifyError := logger.FormatSpotifyErrorMessage(err)[0]
 				logto.SpotifyError(spotifyError)
 			}
+
 			for _, t := range playListTracks.Tracks {
-				fmt.Println(t)
+				//fmt.Println(t)
 				//genres[t.Track.]
-				fmt.Println(client.Get())
+				//fmt.Println(client.G())
 
 				for _, a := range t.Track.Artists {
-					artists.Add(a.Name + "|" + a.ID.String())
+					//fmt.Println(client.GetArtist(a.ID))
+					//artists.Add(a.Name + "|" + a.ID.String())
+					artists.Add(a.ID)
 					tracks[a.ID.String()] = append(tracks[a.ID.String()], t.Track.Name)
 				}
 			}
 
-			break
+			//break
 		}
+
+		// string buffer for performance
+		buf := bytes.Buffer{}
+		//var commaSepArtistIdsList []string
+		idx := 0
+		//idxa := 0
+
+		// add all artist IDs in one request
+		for key := range artists.set {
+			if idx != 0 {
+				buf.WriteString("," + key.String())
+			} else {
+				buf.WriteString(key.String())
+			}
+
+			idx += 1
+		}
+
+		// get artists details
+		commaSepArtistIds := buf.String()
+		artistIds := strings.Split(commaSepArtistIds, ",")
+		chunkedArtistIds := dataUtils.GetChunksFromStringArray(artistIds, 50)
+		genreCounts := make(map[string]int)
+
+		for _, ids := range chunkedArtistIds {
+
+			cids := strings.Join(ids, ",")
+
+			artistDetails, err := client.GetArtists(spotify.ID(cids))
+
+			if err != nil {
+				spotifyError := logger.FormatSpotifyErrorMessage(err)[0]
+				logto.SpotifyError(spotifyError)
+			}
+
+			for _, ad := range artistDetails {
+				//fmt.Println(ad.Name, ad.Genres, ad.Popularity)
+				for _, g := range ad.Genres {
+					genreCounts[strings.TrimSpace(g)] += 1
+				}
+
+			}
+
+		}
+
+		for key, value := range genreCounts {
+			if value > 19 {
+				fmt.Println(key, value)
+			}
+
+		}
+
+
+
+
+
 
 		//for key, val := range tracks {
 		//	if len(val) > 4 {
