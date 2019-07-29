@@ -1,7 +1,8 @@
 package logger
 
 import (
-"github.com/sirupsen/logrus"
+	"github.com/sirupsen/logrus"
+	"strings"
 )
 
 // Event stores messages to log later, from our standard interface
@@ -13,6 +14,18 @@ type Event struct {
 // StandardLogger enforces specific log message formats
 type StandardLogger struct {
 	*logrus.Logger
+}
+
+func FormatSpotifyErrorMessage(err error) (parsedError []string) {
+	parsedError = strings.Split(err.Error(), "Response:")
+
+	// strip any new lines found in messages
+	// This is currently NOT working
+	for i := 0; i < 2; i++ {
+		parsedError = append(parsedError, strings.TrimSuffix(parsedError[i], "\n"))
+	}
+
+	return
 }
 
 // NewLogger initializes the standard logger
@@ -34,3 +47,4 @@ var (
 func (l *StandardLogger) SpotifyError(err string) {
 	l.Errorf(spotifyErrorMessage.message, err)
 }
+

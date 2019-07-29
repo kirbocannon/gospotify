@@ -1,5 +1,5 @@
 hash: a812b0849a91a6c7ef9b65c293c0c4b9e4b915218ec567e4ac4774645f794eaa
-updated: 2019-07-21T15:12:17.153771-04:00
+updated: 2019-07-28T00:42:07.558516-04:00
 imports:
 - name: github.com/golang/protobuf
   version: 6c65a5562fc06764971b7c5d05c76c75e84bdbf7
@@ -10,13 +10,13 @@ imports:
 - name: github.com/sirupsen/logrus
   version: 07a84ee7412e7a28663d92930a1d46f81b124ee1
 - name: github.com/theillego/gospotify
-  version: 8d4b25c5e98c1bd8ee99f3ba3988a75b598629e6
+  version: 117892d24c95efcb202df58825c6c28a744f64e9
   subpackages:
   - internal/logger
 - name: github.com/zmb3/spotify
-  version: 0ba4a64949368473e066829de4ff80a09f0e15b5
+  version: 5159bf56b13dec33353d18e2903f44f3c1fd6363
 - name: golang.org/x/net
-  version: da137c7871d730100384dbcf36e6f8fa493aef5b
+  version: ca1201d0de80cfde86cb01aea620983605dfe99b
   subpackages:
   - context
   - context/ctxhttp
@@ -26,7 +26,7 @@ imports:
   - clientcredentials
   - internal
 - name: golang.org/x/sys
-  version: fae7ac547cb717d141c433a2a173315e216b64c4
+  version: fc99dfbffb4e5ed5758a37e31dd861afe285406b
   subpackages:
   - unix
 - name: google.golang.org/appengine
@@ -39,4 +39,6 @@ imports:
   - internal/remote_api
   - internal/urlfetch
   - urlfetch
+- name: gopkg.in/yaml.v2
+  version: 51d6538a90f86fe93ac480b35f37b2be17fef232
 testImports: []

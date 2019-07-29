@@ -2,6 +2,7 @@ package logger
 
 import (
 	"github.com/sirupsen/logrus"
+	"os"
 	"strings"
 )
 
@@ -31,9 +32,7 @@ func FormatSpotifyErrorMessage(err error) (parsedError []string) {
 // NewLogger initializes the standard logger
 func NewLogger() *StandardLogger {
 	baseLogger := logrus.New()
-
 	standardLogger := &StandardLogger{baseLogger}
-
 	standardLogger.Formatter = &logrus.JSONFormatter{}
 
 	return standardLogger
@@ -41,10 +40,22 @@ func NewLogger() *StandardLogger {
 
 // Declare variables to store log messages as new Events
 var (
-	spotifyErrorMessage = Event{1, "There was an Error in the Request to Spotify - %s", }
+	systemErrorMessage = Event{100, "Error opening the app config file - %s"}
+	spotifyErrorMessage = Event{200, "There was an Error in the Request to Spotify - %s"}
+	logFilename = "logfile.json"
 )
 
-func (l *StandardLogger) SpotifyError(err string) {
-	l.Errorf(spotifyErrorMessage.message, err)
+func (l *StandardLogger) OpenAppLogFile(){
+	f, _ := os.OpenFile(logFilename, os.O_WRONLY | os.O_APPEND | os.O_CREATE, 0644)
+	l.SetOutput(f)
 }
 
+func (l *StandardLogger) SpotifyError(errMsg string) {
+	l.OpenAppLogFile()
+	l.Errorf(spotifyErrorMessage.message, errMsg)
+}
+
+func (l *StandardLogger) AppConfigFileError(errMsg string) {
+	l.OpenAppLogFile()
+	l.Errorf(systemErrorMessage.message, errMsg)
+}

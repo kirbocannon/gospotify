@@ -3,7 +3,20 @@
   <component name="ChangeListManager">
     <list default="true" id="c35b8839-ec48-46ed-8047-1e5c8240b994" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gains.go" beforeDir="false" afterPath="$PROJECT_DIR$/gains.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/glide.lock" beforeDir="false" afterPath="$PROJECT_DIR$/glide.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/logger/logger.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/logger/logger.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/theillego/gospotify/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/theillego/gospotify/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/theillego/gospotify/internal/logger/logger.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/theillego/gospotify/internal/logger/logger.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/theillego/gospotify/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/theillego/gospotify/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/zmb3/spotify/category.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/zmb3/spotify/category.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/zmb3/spotify/playlist.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/zmb3/spotify/playlist.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/zmb3/spotify/playlist_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/zmb3/spotify/playlist_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/github.com/zmb3/spotify/search.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/zmb3/spotify/search.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/http2/transport.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/http2/transport.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/sys/unix/endian_little.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/sys/unix/endian_little.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/sys/windows/types_windows.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/sys/windows/types_windows.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,11 +29,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="90" column="4" selection-start-line="90" selection-start-column="4" selection-end-line="90" selection-end-column="4" />
+            <state relative-caret-position="43">
+              <caret line="217" column="4" selection-start-line="217" selection-start-column="4" selection-end-line="217" selection-end-column="4" />
               <folding>
                 <element signature="e#14#223#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/appConfig.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -37,8 +59,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/internal/logger/logger.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+            <state relative-caret-position="277">
+              <caret line="49" column="18" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
+              <folding>
+                <element signature="e#16#67#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/logfile.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -46,8 +80,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gains.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-263">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="320">
+              <caret line="59" column="32" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -72,6 +106,14 @@
       <find>print</find>
       <find>datautils</find>
       <find>err :=</find>
+      <find>yaml</find>
+      <find>formatsp</find>
+      <find>userID</find>
+      <find>chunk</find>
+      <find>genreCount</find>
+      <find>chunked</find>
+      <find>genrecounts</find>
+      <find>token</find>
     </findStrings>
   </component>
   <component name="GOROOT" path="/usr/local/go" />
@@ -87,10 +129,10 @@
         <option value="$PROJECT_DIR$/glide.lock" />
         <option value="$PROJECT_DIR$/testing.go" />
         <option value="$PROJECT_DIR$/internal/testing/testing.go" />
-        <option value="$PROJECT_DIR$/gains.go" />
-        <option value="$PROJECT_DIR$/internal/logger/logger.go" />
         <option value="$PROJECT_DIR$/internal/listManu/listManu.go" />
         <option value="$PROJECT_DIR$/internal/dataUtils/dataUtils.go" />
+        <option value="$PROJECT_DIR$/internal/logger/logger.go" />
+        <option value="$PROJECT_DIR$/gains.go" />
         <option value="$PROJECT_DIR$/appConfig.yaml" />
         <option value="$PROJECT_DIR$/main.go" />
       </list>
@@ -145,6 +187,7 @@
     <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="go.import.settings.migrated" value="true" />
+    <property name="go.vendoring.notification.had.been.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -180,20 +223,20 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
+    <configuration name="go build logger.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="gospotify" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/internal/logger/logger.go" />
+      <package value="gospotify" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
     <configuration name="go build main.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="gospotify" />
       <working_directory value="$PROJECT_DIR$/" />
       <kind value="FILE" />
       <filePath value="$PROJECT_DIR$/main.go" />
-      <package value="github.com/theillego/gospotify" />
-      <directory value="$PROJECT_DIR$/" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="gospotify" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/cmd/gospotify/main.go" />
       <package value="github.com/theillego/gospotify" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
@@ -220,9 +263,9 @@
       <list>
         <item itemvalue="Go Build.go build main.go (1)" />
         <item itemvalue="Go Build.go build gains.go" />
+        <item itemvalue="Go Build.go build logger.go" />
         <item itemvalue="Go Build.go build testing.go (1)" />
         <item itemvalue="Go Build.go build testing.go" />
-        <item itemvalue="Go Build.go build main.go" />
       </list>
     </recent_temporary>
   </component>
@@ -234,7 +277,7 @@
       <window_info id="Structure" order="1" sideWeight="0.45286196" side_tool="true" visible="true" weight="0.25641027" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3298969" />
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31958762" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -267,19 +310,29 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/glide.lock">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gains.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-263">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="473">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/logfile.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/internal/logger/logger.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="28" column="1" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+        <state relative-caret-position="277">
+          <caret line="49" column="18" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
+          <folding>
+            <element signature="e#16#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logfile.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
@@ -290,17 +343,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/gains.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="59" column="32" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/appConfig.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="90" column="4" selection-start-line="90" selection-start-column="4" selection-end-line="90" selection-end-column="4" />
+        <state relative-caret-position="43">
+          <caret line="217" column="4" selection-start-line="217" selection-start-column="4" selection-end-line="217" selection-end-column="4" />
           <folding>
             <element signature="e#14#223#0" expanded="true" />
           </folding>

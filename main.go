@@ -5,6 +5,7 @@ import (
 	"context"
 	"fmt"
 	"github.com/zmb3/spotify"
+	"golang.org/x/oauth2"
 	"golang.org/x/oauth2/clientcredentials"
 	"gopkg.in/yaml.v2"
 	"gospotify/internal/dataUtils"
@@ -14,9 +15,21 @@ import (
 	"strings"
 )
 
+// setup logging
+var logto = logger.NewLogger()
+
 type Track struct {
 	Name string
 	Artists []spotify.SimpleArtist
+
+}
+
+type SpotifyClient struct {
+	Client *spotify.Client
+	SpotifyCredentials *SpotifyCredentials
+	UserID string
+	Token *oauth2.Token
+	ValidToken bool
 
 }
 
@@ -25,6 +38,16 @@ type SpotifyCredentials struct {
 	ClientId string `yaml:"id"`
 	ClientSecret string `yaml:"secret"`
 }
+
+//type SpotifyUsers struct {
+//	UserIds *SpotifyUser `yaml:"userIds"`
+//
+//}
+//
+//type SpotifyUser struct {
+//	ClientId string `yaml:"id"`
+//	ClientSecret string `yaml:"secret"`
+//}
 
 type Genre struct {
 	Name string
@@ -77,26 +100,26 @@ func (set *ArtistIdSet) Remove(i spotify.ID) {
 	delete(set.set, i)
 }
 
-func main() {
-
-	filename, _ := filepath.Abs("appConfig.yaml")
-	configFile, err := ioutil.ReadFile(filename)
-
-	if err != nil {
-		panic(err)
-	}
+func (c *SpotifyClient) Init() {
 
 	var spotifyCreds SpotifyCredentials
+
+	// read app config file
+	configFile, err := ReadAppConfigFile()
+
+	if err != nil {
+		logto.AppConfigFileError(err.Error())
+	}
+
 	err = yaml.Unmarshal(configFile, &spotifyCreds)
-	
+
 	if err != nil {
 		panic(err)
 	}
 
-	// setup logging
-	logto := logger.NewLogger()
-	userID := spotifyCreds.UserId
-	validToken := false
+	//c.UserID = spotifyCreds.UserId
+	c.UserID = spotifyCreds.UserId
+	//validToken := false
 
 	// provide API credentials
 	config := &clientcredentials.Config{
@@ -104,22 +127,101 @@ func main() {
 		ClientSecret: spotifyCreds.ClientSecret,
 		TokenURL:     spotify.TokenURL,
 	}
+
 	token, err := config.Token(context.Background())
+	c.Token = token
 
 	if err != nil {
 		serr := logger.FormatSpotifyErrorMessage(err)[0]
 		logto.SpotifyError(serr)
 
 	} else {
-		validToken = true
+		c.ValidToken = true
 	}
+}
 
-	if validToken {
+func ReadAppConfigFile() (configFile []uint8, err error) {
+	filename, _ := filepath.Abs("appConfig.yaml")
+	configFile, err = ioutil.ReadFile(filename)
+	return
+}
 
-		client := spotify.Authenticator{}.NewClient(token)
+//func test(client spotify.Client, chunkedArtistIds []string) {
+//
+//	cids := strings.Join(chunkedArtistIds, ",")
+//
+//	artistDetails, err := client.GetArtists(spotify.ID(cids))
+//
+//	if err != nil {
+//		spotifyError := logger.FormatSpotifyErrorMessage(err)[0]
+//		logto.SpotifyError(spotifyError)
+//	}
+//
+//	for _, ad := range artistDetails {
+//		//fmt.Println(ad.Name, ad.Genres, ad.Popularity)
+//		for _, g := range ad.Genres {
+//			genreCounts[strings.TrimSpace(g)] += 1
+//		}
+//
+//	}
+//
+//
+//}
+
+//func handler(w http.ResponseWriter, r *http.Request) {
+//	fmt.Fprintf(w, "Hello World!")
+//}
+
+func main() {
+
+	//// start http server
+	//http.HandleFunc("/", handler)
+	//http.ListenAndServe(":8080", nil)
+
+	// read app config file
+	//configFile, err := ReadAppConfigFile()
+	//
+	//if err != nil {
+	//	logto.AppConfigFileError(err.Error())
+	//}
+	//
+	//var spotifyCreds SpotifyCredentials
+	//err = yaml.Unmarshal(configFile, &spotifyCreds)
+	//
+	//if err != nil {
+	//	panic(err)
+	//}
+	//
+	//userID := spotifyCreds.UserId
+	//validToken := false
+	//
+	//// provide API credentials
+	//config := &clientcredentials.Config{
+	//	ClientID:     spotifyCreds.ClientId,
+	//	ClientSecret: spotifyCreds.ClientSecret,
+	//	TokenURL:     spotify.TokenURL,
+	//}
+	//
+	//token, err := config.Token(context.Background())
+	//
+	//if err != nil {
+	//	serr := logger.FormatSpotifyErrorMessage(err)[0]
+	//	logto.SpotifyError(serr)
+	//
+	//} else {
+	//	validToken = true
+	//}
+
+	// initialize spotify client
+	c := SpotifyClient{}
+	c.Init()
+	
+	if c.ValidToken {
+
+		client := spotify.Authenticator{}.NewClient(c.Token)
 
 		// get playlist
-		userPlaylists, err := client.GetPlaylistsForUser(userID)
+		userPlaylists, err := client.GetPlaylistsForUser(c.UserID)
 		if err != nil {
 			spotifyError := logger.FormatSpotifyErrorMessage(err)[0]
 			logto.SpotifyError(spotifyError)
@@ -174,12 +276,13 @@ func main() {
 		commaSepArtistIds := buf.String()
 		artistIds := strings.Split(commaSepArtistIds, ",")
 		chunkedArtistIds := dataUtils.GetChunksFromStringArray(artistIds, 50)
-		genreCounts := make(map[string]int)
+
+		// keep track of genre counts
+		var genreCounts = make(map[string]int)
 
 		for _, ids := range chunkedArtistIds {
 
 			cids := strings.Join(ids, ",")
-
 			artistDetails, err := client.GetArtists(spotify.ID(cids))
 
 			if err != nil {
@@ -198,22 +301,11 @@ func main() {
 		}
 
 		for key, value := range genreCounts {
-			if value > 19 {
+			if value > 100 {
 				fmt.Println(key, value)
 			}
 
 		}
 
-
-
-
-
-
-		//for key, val := range tracks {
-		//	if len(val) > 4 {
-		//		fmt.Println(len(val), key, val)
-		//	}
-		//
-		//}
 	}
 }
