@@ -173,7 +173,7 @@ func main() {
 		// get artists details
 		commaSepArtistIds := buf.String()
 		artistIds := strings.Split(commaSepArtistIds, ",")
-		chunkedArtistIds := dataUtils.GetChunksFromStringArray(artistIds, 50)
+		chunkedArtistIds := datautils.GetChunksFromStringArray(artistIds, 50)
 		genreCounts := make(map[string]int)
 
 		for _, ids := range chunkedArtistIds {

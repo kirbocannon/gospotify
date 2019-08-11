@@ -2,21 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c35b8839-ec48-46ed-8047-1e5c8240b994" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/cmd/gospotify-server/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmd/gospotify/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gains.go" beforeDir="false" afterPath="$PROJECT_DIR$/gains.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/glide.lock" beforeDir="false" afterPath="$PROJECT_DIR$/glide.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/logger/logger.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/logger/logger.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gains.go" beforeDir="false" afterPath="$PROJECT_DIR$/archive/gains.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/dataUtils/dataUtils.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/datautils/datautils.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logfile.json" beforeDir="false" afterPath="$PROJECT_DIR$/logfile.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/theillego/gospotify/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/theillego/gospotify/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/theillego/gospotify/internal/logger/logger.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/theillego/gospotify/internal/logger/logger.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/github.com/theillego/gospotify/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/theillego/gospotify/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/zmb3/spotify/category.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/zmb3/spotify/category.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/zmb3/spotify/playlist.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/zmb3/spotify/playlist.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/zmb3/spotify/playlist_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/zmb3/spotify/playlist_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/github.com/zmb3/spotify/search.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/github.com/zmb3/spotify/search.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/net/http2/transport.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/net/http2/transport.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/sys/unix/endian_little.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/sys/unix/endian_little.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/golang.org/x/sys/windows/types_windows.go" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/golang.org/x/sys/windows/types_windows.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,62 +19,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cmd/gospotify/main.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2484">
+              <caret line="69" column="43" selection-start-line="69" selection-start-column="43" selection-end-line="69" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cmd/gospotify-server/main.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="43">
-              <caret line="217" column="4" selection-start-line="217" selection-start-column="4" selection-end-line="217" selection-end-column="4" />
+            <state relative-caret-position="225">
+              <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
               <folding>
-                <element signature="e#14#223#0" expanded="true" />
+                <element signature="e#14#81#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/appConfig.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/internal/dataUtils/dataUtils.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="17" selection-start-column="17" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/internal/logger/logger.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="49" column="18" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
-              <folding>
-                <element signature="e#16#67#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logfile.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gains.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="59" column="32" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -114,6 +77,8 @@
       <find>chunked</find>
       <find>genrecounts</find>
       <find>token</find>
+      <find>client</find>
+      <find>newartist</find>
     </findStrings>
   </component>
   <component name="GOROOT" path="/usr/local/go" />
@@ -123,7 +88,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/cmd/gospotify/main.go" />
         <option value="$PROJECT_DIR$/pkg/logwrapper.go" />
         <option value="$PROJECT_DIR$/pkg/logger.go" />
         <option value="$PROJECT_DIR$/glide.lock" />
@@ -134,14 +98,16 @@
         <option value="$PROJECT_DIR$/internal/logger/logger.go" />
         <option value="$PROJECT_DIR$/gains.go" />
         <option value="$PROJECT_DIR$/appConfig.yaml" />
+        <option value="$PROJECT_DIR$/cmd/gospotify/main.go" />
+        <option value="$PROJECT_DIR$/cmd/gospotify-server/main.go" />
         <option value="$PROJECT_DIR$/main.go" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1680" />
-    <option name="height" value="972" />
+    <option name="height" value="977" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -149,7 +115,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -160,13 +125,36 @@
             <path>
               <item name="gospotify" type="b2602c69:ProjectViewProjectNode" />
               <item name="gospotify" type="462c0819:PsiDirectoryNode" />
+              <item name="cmd" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gospotify" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gospotify" type="462c0819:PsiDirectoryNode" />
+              <item name="cmd" type="462c0819:PsiDirectoryNode" />
+              <item name="gospotify" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gospotify" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gospotify" type="462c0819:PsiDirectoryNode" />
+              <item name="cmd" type="462c0819:PsiDirectoryNode" />
+              <item name="gospotify-server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gospotify" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gospotify" type="462c0819:PsiDirectoryNode" />
               <item name="internal" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gospotify" type="b2602c69:ProjectViewProjectNode" />
               <item name="gospotify" type="462c0819:PsiDirectoryNode" />
               <item name="internal" type="462c0819:PsiDirectoryNode" />
-              <item name="dataUtils" type="462c0819:PsiDirectoryNode" />
+              <item name="datautils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gospotify" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gospotify" type="462c0819:PsiDirectoryNode" />
+              <item name="internal" type="462c0819:PsiDirectoryNode" />
+              <item name="logger" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gospotify" type="b2602c69:ProjectViewProjectNode" />
@@ -176,6 +164,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -195,10 +184,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/archive" />
+      <recent name="$PROJECT_DIR$/cmd/gospotify" />
       <recent name="$PROJECT_DIR$/internal" />
       <recent name="$PROJECT_DIR$/pkg/logger" />
       <recent name="$PROJECT_DIR$/pkg" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -213,7 +203,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build main.go (1)">
+  <component name="RunManager" selected="Go Build.go build main.go">
     <configuration name="go build gains.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="gospotify" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -232,7 +222,7 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build main.go (1)" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true">
       <module name="gospotify" />
       <working_directory value="$PROJECT_DIR$/" />
       <kind value="FILE" />
@@ -261,7 +251,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build main.go (1)" />
+        <item itemvalue="Go Build.go build main.go" />
         <item itemvalue="Go Build.go build gains.go" />
         <item itemvalue="Go Build.go build logger.go" />
         <item itemvalue="Go Build.go build testing.go (1)" />
@@ -270,15 +260,15 @@
     </recent_temporary>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="965" extended-state="6" />
+    <frame x="0" y="23" width="1680" height="977" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.54713804" visible="true" weight="0.25641027" />
-      <window_info id="Structure" order="1" sideWeight="0.45286196" side_tool="true" visible="true" weight="0.25641027" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.5456053" visible="true" weight="0.25946277" />
+      <window_info id="Structure" order="1" sideWeight="0.4543947" side_tool="true" visible="true" weight="0.25946277" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3298969" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31958762" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31864408" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -299,16 +289,8 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/cmd/gospotify/main.go" />
-    <entry file="file://$PROJECT_DIR$/testing.go">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/internal/testing/testing.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" selection-start-column="12" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/testing.go" />
+    <entry file="file://$PROJECT_DIR$/internal/testing/testing.go" />
     <entry file="file://$PROJECT_DIR$/glide.lock">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="473">
@@ -316,19 +298,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logfile.log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/internal/logger/logger.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="49" column="18" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
-          <folding>
-            <element signature="e#16#67#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/logfile.log" />
     <entry file="file://$PROJECT_DIR$/logfile.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -336,33 +306,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/internal/dataUtils/dataUtils.go">
+    <entry file="file://$PROJECT_DIR$/appConfig.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/internal/datautils/datautils.go">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="17" selection-start-column="17" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gains.go">
+    <entry file="file://$PROJECT_DIR$/internal/logger/logger.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="45" column="1" selection-start-line="45" selection-start-column="1" selection-end-line="45" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/archive/gains.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="59" column="32" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/appConfig.yaml">
+    <entry file="file://$PROJECT_DIR$/cmd/gospotify-server/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmd/gospotify/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2484">
+          <caret line="69" column="43" selection-start-line="69" selection-start-column="43" selection-end-line="69" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="43">
-          <caret line="217" column="4" selection-start-line="217" selection-start-column="4" selection-end-line="217" selection-end-column="4" />
+        <state relative-caret-position="225">
+          <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
           <folding>
-            <element signature="e#14#223#0" expanded="true" />
+            <element signature="e#14#81#0" expanded="true" />
           </folding>
         </state>
       </provider>

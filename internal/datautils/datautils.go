@@ -1,4 +1,4 @@
-package dataUtils
+package datautils
 
 func GetChunksFromStringArray(arr []string, chunkLength int) (chunks [][]string)  {
 
