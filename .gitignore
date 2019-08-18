@@ -1,3 +1,4 @@
 .idea/
 appConfig.yaml
 archive/
+node_modules/
