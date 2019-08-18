@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "react-redux": "^7.1.0",
+    "redux": "^4.0.4"
+  },
+  "name": "gospotify",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theillego/gospotify.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theillego/gospotify/issues"
+  },
+  "homepage": "https://github.com/theillego/gospotify#readme",
+  "description": ""
+}
