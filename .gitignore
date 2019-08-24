@@ -2,3 +2,4 @@
 appConfig.yaml
 archive/
 node_modules/
+vendor/
