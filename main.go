@@ -95,6 +95,7 @@ func main() {
 	// Serve frontend views files
 	router.Use(static.Serve("/", static.LocalFile("./views", true)))
 	//router.Use(static.Serve("/scripts", static.LocalFile("./node_modules", true)))
+	//router.Static("/scripts", "./node_modules")
 
 	// Setup route group for the API
 	api := router.Group("/api")

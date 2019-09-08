@@ -1,10 +1,7 @@
-const postJson = {
-    method: 'POST',
-    headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-    }
-};
+import React from "react";
+import ReactDOM from "react-dom";
+import {postJson} from "../constants/AppConstants"
+
 
 class App extends React.Component {
 
@@ -45,10 +42,10 @@ class LoggedIn extends React.Component {
     }
 
     logout() {
-        localStorage.removeItem("id_token");
-        localStorage.removeItem("access_token");
-        localStorage.removeItem("profile");
-        location.reload();
+        // localStorage.removeItem("id_token");
+        // localStorage.removeItem("access_token");
+        // localStorage.removeItem("profile");
+        // location.reload();
     }
 
     serverRequest() {
