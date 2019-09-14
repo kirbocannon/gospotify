@@ -1,26 +1,38 @@
-hash: a812b0849a91a6c7ef9b65c293c0c4b9e4b915218ec567e4ac4774645f794eaa
-updated: 2019-08-24T16:05:48.661454-04:00
+hash: 6ee19f73b310cdaa51b81aab659f6415bddf12734e860290a60bc9f666c92f7e
+updated: 2019-09-08T00:19:02.223096-04:00
 imports:
 - name: github.com/gin-contrib/sse
-  version: 54d8467d122d380a14768b6b4e5cd7ca4755938f
+  version: 43f0f29dbd2b3f0feeebff91fd9cda22db296938
 - name: github.com/gin-gonic/contrib
   version: 7fb7810ed2a0c49532e0005d77953bb5572f0525
   subpackages:
   - static
 - name: github.com/gin-gonic/gin
-  version: 9a820cf0054bcd769f785457b7dbd149a7b29fdd
+  version: f38c30a0d2f56c54397543f08902b00260c70ff6
   subpackages:
   - binding
   - internal/json
   - render
+- name: github.com/go-playground/locales
+  version: 630ebbb602847eba93e75ae38bbc7bb7abcf1ff3
+  subpackages:
+  - currency
+- name: github.com/go-playground/universal-translator
+  version: 71201497bace774495daed26a3874fd339e0b538
 - name: github.com/golang/protobuf
-  version: 4c88cc3f1a34ffade77b79abc53335d1e511f25b
+  version: 822fe56949f5d56c9e2f02367c657e0e9b4d27d1
   subpackages:
   - proto
 - name: github.com/json-iterator/go
   version: 27518f6661eba504be5a7a9a9f6d9460d892ade3
+- name: github.com/kirbocannon/gospotify
+  version: 610fd20b486d67dda1439ef2c78c7b900b7ec3ae
+  subpackages:
+  - internal/logger
 - name: github.com/konsorten/go-windows-terminal-sequences
   version: f55edac94c9bbba5d6182a4be46d86a2c9b5b50e
+- name: github.com/leodido/go-urn
+  version: a67a23e1c1af3c66528573bb86a87246477277c1
 - name: github.com/mattn/go-isatty
   version: bf9a1dea1961e1d831824fb135332bfb8c10e8b8
 - name: github.com/modern-go/concurrent
@@ -29,10 +41,6 @@ imports:
   version: 94122c33edd36123c84d5368cfb2b69df93a0ec8
 - name: github.com/sirupsen/logrus
   version: de736cf91b921d56253b4010270681d33fdf7cb5
-- name: github.com/theillego/gospotify
-  version: 2fae6932f167860a0d9929caa61db79ce68b9a41
-  subpackages:
-  - internal/logger
 - name: github.com/ugorji/go
   version: 42bc974514ff101a54c6b72a0e4dee29d96c0b26
   subpackages:
@@ -40,7 +48,7 @@ imports:
 - name: github.com/zmb3/spotify
   version: 5159bf56b13dec33353d18e2903f44f3c1fd6363
 - name: golang.org/x/net
-  version: 74dc4d7220e7acc4e100824340f3e66577424772
+  version: ba9fcec4b297b415637633c5a6e8fa592e4a16c3
   subpackages:
   - context
   - context/ctxhttp
@@ -50,11 +58,11 @@ imports:
   - clientcredentials
   - internal
 - name: golang.org/x/sys
-  version: fde4db37ae7ad8191b03d30d27f258b5291ae4e3
+  version: d223b2b6db03988709bac9e66576ad6ec0d83695
   subpackages:
   - unix
 - name: google.golang.org/appengine
-  version: fb139bde60fa77cede04f226b4d5a3cf68dcce27
+  version: 5f2a59506353b8d5ba8cbbcd9f3c1f41f1eaf079
   subpackages:
   - internal
   - internal/base
@@ -63,8 +71,8 @@ imports:
   - internal/remote_api
   - internal/urlfetch
   - urlfetch
-- name: gopkg.in/go-playground/validator.v8
-  version: 5f1438d3fca68893a817e4a66806cea46a9e4ebf
+- name: gopkg.in/go-playground/validator.v9
+  version: 556b9da3c05f2a935bc086fb5a0bb55dd8112d2d
 - name: gopkg.in/yaml.v2
   version: 51d6538a90f86fe93ac480b35f37b2be17fef232
 testImports: []

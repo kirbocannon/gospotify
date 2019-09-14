@@ -92,24 +92,43 @@ func main() {
 	// Set the router as the default one shipped with Gin
 	router := gin.Default()
 
-	// Serve frontend views files
+	// Serve frontend views files (views is a react naming convention)
 	router.Use(static.Serve("/", static.LocalFile("./views", true)))
-	//router.Use(static.Serve("/scripts", static.LocalFile("./node_modules", true)))
-	//router.Static("/scripts", "./node_modules")
+	router.LoadHTMLGlob("./views/*.html")
+
+	router.GET("/index", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "index.html", nil)
+	})
 
 	// Setup route group for the API
 	api := router.Group("/api")
-	api.GET("/", func(c *gin.Context) {
-		c.JSON(http.StatusOK, gin.H {
-			"message": "pong",
-		})
-	})
+	//api.GET("/", func(c *gin.Context) {
+	//	c.JSON(http.StatusOK, gin.H {
+	//		"message": "pong",
+	//	})
+	//})
 
 	api.GET("/genre/all/counts", GetGenreCounts)
+
 	//api.POST("/jokes/like/:jokeID", LikeJoke)
 
 	// Start and run the server
 	router.Run(":3000")
+
+
+
+
+
+
+	//router.Use(static.Serve("/scripts", static.LocalFile("./node_modules", true)))
+	//router.Static("/scripts", "./node_modules")
+
+
+	//router.GET("/graph", func(c *gin.Context) {
+	//	c.HTML(http.StatusOK, "graph.html", gin.H{
+	//		"hi": "hi",
+	//	})
+	//})
 
 
 

@@ -1,5 +1,5 @@
 .idea/
 appConfig.yaml
-archive/
+**archive/
 node_modules/
 vendor/
