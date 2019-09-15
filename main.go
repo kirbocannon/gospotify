@@ -72,6 +72,7 @@ func GetGenreCounts(c *gin.Context) {
 //	}
 //}
 
+
 func main() {
 
 	//c := gospotify.SpotifyClient{}
@@ -100,20 +101,43 @@ func main() {
 		c.HTML(http.StatusOK, "index.html", nil)
 	})
 
+	// because we are using CSR (Client-side Routing) with React, we need to redirect
+	// all requests back to /index and allow CSR to take over for view loading form there
+	router.GET("/graph", func(c *gin.Context) {
+		c.Request.URL.Path = "/index"
+		router.HandleContext(c)
+	})
+
+	router.GET("/genre-count", func(c *gin.Context) {
+		c.Request.URL.Path = "/index"
+		router.HandleContext(c)
+	})
+
 	// Setup route group for the API
 	api := router.Group("/api")
+	api.GET("/genre/all/counts", GetGenreCounts)
+
+	router.Run(":3000")
+
+
+
+
+
+
+
+
 	//api.GET("/", func(c *gin.Context) {
 	//	c.JSON(http.StatusOK, gin.H {
 	//		"message": "pong",
 	//	})
 	//})
 
-	api.GET("/genre/all/counts", GetGenreCounts)
+
 
 	//api.POST("/jokes/like/:jokeID", LikeJoke)
 
 	// Start and run the server
-	router.Run(":3000")
+
 
 
 
@@ -123,12 +147,6 @@ func main() {
 	//router.Use(static.Serve("/scripts", static.LocalFile("./node_modules", true)))
 	//router.Static("/scripts", "./node_modules")
 
-
-	//router.GET("/graph", func(c *gin.Context) {
-	//	c.HTML(http.StatusOK, "graph.html", gin.H{
-	//		"hi": "hi",
-	//	})
-	//})
 
 
 

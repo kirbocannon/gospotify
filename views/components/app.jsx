@@ -1,7 +1,9 @@
 import React from "react"
 import ReactDOM from "react-dom"
+import styled from 'styled-components';
 import {postJson} from "../constants/AppConstants"
 import {BrowserRouter as Router, Link, Route} from "react-router-dom";
+
 
 
 class App extends React.Component {
@@ -16,37 +18,26 @@ class App extends React.Component {
     }
 }
 
-class Home extends React.Component {
-    render() {
-        return (
-            <div className="container">
-                <div className="col-xs-8 col-xs-offset-2 jumbotron text-center">
-                    <h1>Spotify Insights</h1>
-                    <p>Insight into your personal Spotify Account</p>
-                    <p>Sign in to get access </p>
-                    /*<a onClick={this.authenticate} className="btn btn-primary btn-lg btn-login btn-block">Sign In</a>*/
-                </div>
-            </div>
-        )
-    }
-}
+// class Home extends React.Component {
+//     render() {
+//         return (
+//             <div className="container">
+//                 <div className="col-xs-8 col-xs-offset-2 jumbotron text-center">
+//                     <h1>Spotify Insights</h1>
+//                     <p>Insight into your personal Spotify Account</p>
+//                     <p>Sign in to get access </p>
+//                     /*<a onClick={this.authenticate} className="btn btn-primary btn-lg btn-login btn-block">Sign In</a>*/
+//                 </div>
+//             </div>
+//         )
+//     }
+// }
 
 class LoggedIn extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            showGraph: false,
-        };
 
         this.logout = this.logout.bind(this);
-        this._showGraph = this._showGraph.bind(this);
-    }
-
-    _showGraph() {
-        this.setState({
-            showGraph: true,
-        });
-        console.log('Show Graph')
     }
 
     logout() {
@@ -60,19 +51,23 @@ class LoggedIn extends React.Component {
         return (
             <Router>
                 <div className="container">
-                    <br />
                     <span className="pull-right">
                         <a onClick={this.logout}>Log out</a>
                     </span>
-                    <h2>Spotify Insights</h2>
-                    <p>Spotify Visualizations</p>
-                    <Link to={`/genre-count`}>
-                        <button className="btn btn-primary">Genre Count</button>
-                    </Link>
+                    <Title>
+                        Spotify Insights
+                    </Title>
+                    <Text>
+                        Spotify Visualizations
+                    </Text>
 
-                    <Link to={`/graph`}>
-                        <button className="btn btn-primary">Graph</button>
-                    </Link>
+                        <Link to={`/genre-count`}>
+                            <button className="btn btn-primary">Genre Count</button>
+                        </Link>
+
+                        <Link to={`/graph`}>
+                            <button className="btn btn-primary">Graph</button>
+                        </Link>
 
                     <div className="row">
                         <div className="container"><Route path="/genre-count" component={GenreCountContainer} /></div>
@@ -113,7 +108,7 @@ class GenreCountContainer extends React.Component {
     render() {
         return(
             <div className="row">
-                <div className="container" id="main">
+                <div className="container">
                     {  Object.keys(this.state.genreCounts).map((key, index) => (
                         //<p key={index}> this is my key {key} and this is my value {this.state.genreCounts[key]}</p>
                         <GenreCountCard key={index} genreName={key} count={this.state.genreCounts[key]} />
@@ -167,6 +162,17 @@ class Graph extends React.Component {
         return ('hello')
     }
 }
+
+const Title = styled.h1`
+  text-align: center;
+  color: #1DB954;
+`;
+
+const Text = styled.p`
+  color: #fff;
+  
+`;
+
 
 
 ReactDOM.render(<App />, document.getElementById('app'));
