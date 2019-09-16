@@ -103,6 +103,8 @@ func main() {
 
 	// because we are using CSR (Client-side Routing) with React, we need to redirect
 	// all requests back to /index and allow CSR to take over for view loading form there
+	// unfortunately there's no clean way to do this, so we end up having to create a route
+	// for each link on the backend
 	router.GET("/graph", func(c *gin.Context) {
 		c.Request.URL.Path = "/index"
 		router.HandleContext(c)
