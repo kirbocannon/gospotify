@@ -26,7 +26,7 @@ module.exports = {
         // the output bundle
         filename: 'build.js',
         // saves the files into the dist/static folder
-        path: path.resolve(__dirname, 'views', 'components'),
+        path: path.resolve(__dirname, 'webapp'),
         // set static as src="static/main.js as relative path
         publicPath: 'components/'
     },

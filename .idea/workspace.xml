@@ -2,15 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c35b8839-ec48-46ed-8047-1e5c8240b994" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/views/components/viz/WorldMap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/components/viz/world.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/appbak.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/components/layout/MainNavbar/MainNavbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/components/layout/MainNavbar/NavbarSearch.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/components/layout/MainNavbar/NavbarToggle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/components/layout/MainSidebar/MainSidebar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/components/layout/MainSidebar/SidebarNavItem.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/components/layout/MainSidebar/SidebarNavItems.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/components/app.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/views/components/app.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/components/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/components/build.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/constants/AppConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/constants/AppConstants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/components/app.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/app.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/components/build.js" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/build.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/components/layout/MainSidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/components/layout/MainFooter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/components/layout/SidebarMainNavbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/components/layout/MainSidebar/SidebarMainNavbar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/components/viz/WorldMap.js" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/components/viz/WorldMap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/components/viz/world.js" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/components/viz/world.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/constants/AppConstants.js" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/constants/AppConstants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,10 +32,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/components/app.jsx">
+        <entry file="file://$PROJECT_DIR$/webapp/app.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2188">
-              <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
+            <state relative-caret-position="324">
+              <caret line="28" column="27" lean-forward="true" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -33,40 +44,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/components/viz/world.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="182" column="24" selection-start-line="182" selection-start-column="24" selection-end-line="182" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/components/viz/WorldMap.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="42" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="42" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="122" selection-start-line="122" selection-end-line="122" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/constants/AppConstants.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+            <state relative-caret-position="-404">
+              <caret line="96" column="59" selection-start-line="96" selection-start-column="59" selection-end-line="96" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -84,12 +65,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>dom</find>
-      <find>bootstrap</find>
-      <find>col-xs</find>
-      <find>postjson</find>
-      <find>theillego</find>
-      <find>index</find>
       <find>loggedin</find>
       <find>genre</find>
       <find>genrecounts</find>
@@ -114,6 +89,12 @@
       <find>filtered</find>
       <find>835</find>
       <find>size</find>
+      <find>serverrequest</find>
+      <find>type spotifyclient</find>
+      <find>*spotifyclient</find>
+      <find>appdata</find>
+      <find>components</find>
+      <find>genre-count</find>
     </findStrings>
   </component>
   <component name="GOROOT" path="/usr/local/go" />
@@ -147,12 +128,9 @@
         <option value="$PROJECT_DIR$/views/components/build.js" />
         <option value="$PROJECT_DIR$/views/test.html" />
         <option value="$PROJECT_DIR$/.babelrc" />
-        <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/glide.lock" />
         <option value="$PROJECT_DIR$/glide.yaml" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/views/graph.html" />
-        <option value="$PROJECT_DIR$/main.go" />
         <option value="$PROJECT_DIR$/views/index.html" />
         <option value="$PROJECT_DIR$/views/components/viz/genre-graph.jsx" />
         <option value="$PROJECT_DIR$/views/components/viz/WorldMap.jsx" />
@@ -160,6 +138,12 @@
         <option value="$PROJECT_DIR$/views/components/viz/world.js" />
         <option value="$PROJECT_DIR$/views/constants/AppConstants.js" />
         <option value="$PROJECT_DIR$/views/components/app.jsx" />
+        <option value="$PROJECT_DIR$/views/appbak.jsx" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/webpack.config.js" />
+        <option value="$PROJECT_DIR$/webapp/app.jsx" />
+        <option value="$PROJECT_DIR$/main.go" />
+        <option value="$PROJECT_DIR$/webapp/index.html" />
       </list>
     </option>
   </component>
@@ -169,10 +153,11 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1680" />
     <option name="y" value="23" />
-    <option name="width" value="1573" />
-    <option name="height" value="926" />
+    <option name="width" value="1919" />
+    <option name="height" value="1042" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -204,19 +189,42 @@
             <path>
               <item name="gospotify" type="b2602c69:ProjectViewProjectNode" />
               <item name="gospotify" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="cmd" type="462c0819:PsiDirectoryNode" />
+              <item name="gospotify-server" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gospotify" type="b2602c69:ProjectViewProjectNode" />
               <item name="gospotify" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gospotify" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gospotify" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gospotify" type="b2602c69:ProjectViewProjectNode" />
               <item name="gospotify" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="constants" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gospotify" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gospotify" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
+              <item name="MainNavbar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gospotify" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gospotify" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="layout" type="462c0819:PsiDirectoryNode" />
+              <item name="MainSidebar" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gospotify" type="b2602c69:ProjectViewProjectNode" />
@@ -247,15 +255,15 @@
     <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/archive" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/webapp/components/layout/MainSidebar" />
+      <recent name="$PROJECT_DIR$/webapp" />
+      <recent name="$PROJECT_DIR$/webapp/components" />
       <recent name="$PROJECT_DIR$/views/templates" />
       <recent name="$PROJECT_DIR$/views" />
-      <recent name="$PROJECT_DIR$/views/components" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/archive" />
-      <recent name="$PROJECT_DIR$/views/temp" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -327,15 +335,15 @@
     </recent_temporary>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="976" extended-state="6" />
+    <frame x="1680" y="23" width="1919" height="1042" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6383333" visible="true" weight="0.23199023" />
-      <window_info id="Structure" order="1" sideWeight="0.36166668" side_tool="true" visible="true" weight="0.23199023" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6351351" visible="true" weight="0.20671284" />
+      <window_info id="Structure" order="1" sideWeight="0.36486486" side_tool="true" visible="true" weight="0.20671284" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32871974" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49968848" weight="0.3457627" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49968848" weight="0.3705263" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -343,7 +351,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49844238" visible="true" weight="0.32126698" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49844238" visible="true" weight="0.29894736" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50155765" side_tool="true" weight="0.32641292" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -386,21 +394,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cmd/gospotify-server/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/src/App.css" />
-    <entry file="file://$PROJECT_DIR$/appConfig.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/archive/appbackup.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1035">
@@ -410,16 +404,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/index.js" />
     <entry file="file://$PROJECT_DIR$/views/bundle.js" />
-    <entry file="file://$PROJECT_DIR$/views/components/layout/MainSidebar.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/components/layout/SidebarMainNavbar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="26" selection-start-column="26" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/main.js" />
     <entry file="file://$PROJECT_DIR$/node_modules/webpack-sources/package.json">
       <provider selected="true" editor-type-id="text-editor" />
@@ -431,13 +415,6 @@
     <entry file="file://$PROJECT_DIR$/src/index.js" />
     <entry file="file://$PROJECT_DIR$/views/components/index1.html" />
     <entry file="file://$PROJECT_DIR$/views/test.html" />
-    <entry file="file://$PROJECT_DIR$/.babelrc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/archive/index.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -451,13 +428,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/glide.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="30" lean-forward="true" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package-lock.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
@@ -466,37 +436,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/graph.html" />
-    <entry file="file://$PROJECT_DIR$/views/components/build.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="808">
-          <caret line="229" selection-start-line="229" selection-end-line="229" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmd/gospotify/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="45" column="23" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="2" lean-forward="true" selection-start-line="39" selection-start-column="2" selection-end-line="39" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/github.com/gin-gonic/gin/gin.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
@@ -504,48 +443,149 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/components/viz/world.js">
+    <entry file="file://$PROJECT_DIR$/webapp/components/viz/world.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="182" column="24" selection-start-line="182" selection-start-column="24" selection-end-line="182" selection-end-column="24" />
+        <state relative-caret-position="-1909">
+          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/constants/AppConstants.js">
+    <entry file="file://$PROJECT_DIR$/webapp/constants/AppConstants.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="46" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/index.html">
+    <entry file="file://$PROJECT_DIR$/webapp/components/viz/WorldMap.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="122" selection-start-line="122" selection-end-line="122" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/components/viz/WorldMap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="42" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="42" />
+        <state relative-caret-position="300">
+          <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/components/app.jsx">
+    <entry file="file://$PROJECT_DIR$/.babelrc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2188">
-          <caret line="25" column="43" selection-start-line="25" selection-start-column="43" selection-end-line="25" selection-end-column="43" />
+        <state relative-caret-position="30">
+          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/components/layout/MainSidebar/SidebarMainNavbar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="26" selection-start-column="26" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/appbak.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1140">
+          <caret line="80" column="26" selection-start-line="80" selection-start-column="26" selection-end-line="80" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="n#!!block;n#onResize#0;n#Graph#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="17" lean-forward="true" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmd/gospotify/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2321">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmd/gospotify-server/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/build.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="229" selection-start-line="229" selection-end-line="229" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appConfig.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/glide.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="30" lean-forward="true" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="28" column="48" lean-forward="true" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-404">
+          <caret line="96" column="59" selection-start-line="96" selection-start-column="59" selection-end-line="96" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/components/layout/MainFooter.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/components/layout/MainSidebar/MainSidebar.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/components/layout/MainNavbar/MainNavbar.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/components/layout/MainNavbar/NavbarSearch.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/components/layout/MainNavbar/NavbarToggle.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/components/layout/MainSidebar/SidebarNavItem.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/components/layout/MainSidebar/SidebarNavItems.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webapp/app.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="28" column="27" lean-forward="true" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>

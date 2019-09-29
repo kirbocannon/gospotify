@@ -94,8 +94,8 @@ func main() {
 	router := gin.Default()
 
 	// Serve frontend views files (views is a react naming convention)
-	router.Use(static.Serve("/", static.LocalFile("./views", true)))
-	router.LoadHTMLGlob("./views/*.html")
+	router.Use(static.Serve("/", static.LocalFile("./webapp", true)))
+	router.LoadHTMLGlob("./webapp/*.html")
 
 	router.GET("/index", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "index.html", nil)
